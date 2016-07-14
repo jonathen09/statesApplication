@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-  <
   <meta charset="UTF-8">
   <title>States Information</title>
 </head>
 <body>
   <div ng-controller="MainController" class="main-app">
-
+    <div ng-repeat="state in states | filter: inProgramConvert">
+      <span>{{state.name}} ID: {{state.id}} inProgram {{state.inProgram}}</span>
+    </div>
+    <div ng-show="{{error}}">Something has gone wrong we are fixing it....</div>
   </div>
   <script src="lib/angular/angular.js"></script>
   <script src="app/app.js"></script>
