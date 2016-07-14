@@ -1,5 +1,14 @@
 Angular.module('app.services',[])
 
-.factory('API', function() {
+.factory('API', function($http) {
+
+var getAll = function() {
+  $http.
+}
+
+
+return {
+  getAll: getAll
+};
 
 });
